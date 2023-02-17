@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lei.mapper.TagMapper">
+    <insert id="saveArticleTags">
+        insert into fl_article_tag (article_id, tag_id)
+        values (#{articleId},#{tagId});
+    </insert>
+    <select id="getTagsById" resultType="long">
+        select tag_id from fl_article_tag where article_id = #{articleId}
+    </select>
+
+
+    <insert id="updateArticleTags">
+        insert into fl_article_tag (article_id,tag_id)values (#{articleId},#{tagId})
+        ON DUPLICATE KEY UPDATE  tag_id = #{tagId}
+    </insert>
+</mapper>

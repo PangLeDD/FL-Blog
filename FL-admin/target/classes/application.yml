@@ -1,0 +1,28 @@
+server:
+  port: 8989
+spring:
+  main:
+    # 允许依赖循环
+    allow-circular-references: true
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fl_blog?chararcterEncoding=utf-8&serviceTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+oss:
+  accessKey: 2AahlZqWnISP-D-DbjD-2uMvTUNqXVfINFKr-OOE
+  secretKey: sA5_-z8Dk0Dvk8WNzhDzU-zZexGPJYxgy1-RgIog
+  bucket: fl-blog

@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "oss",
+      "type": "com.lei.Test01",
+      "sourceType": "com.lei.Test01"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
